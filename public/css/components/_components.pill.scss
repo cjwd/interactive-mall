@@ -1,0 +1,15 @@
+/*=============================================
+=            #Pill            =
+=============================================*/
+
+.pill {
+  display: inline-block;
+  margin-bottom: var(--unit);
+  padding: 5px 10px;
+  line-height: 1;
+  border-radius: 30px;
+  background-color: var(--primary-color);
+  color: #f9f9f9;
+}
+
+/*=====  End of #Pill  ======*/

@@ -1,0 +1,35 @@
+.map {
+  pointer-events: none;
+}
+
+.map__ground {
+  fill: #e3edf0;
+  stroke: #9e9cc1;
+  stroke-width: 5;
+}
+
+.map__feature {
+  fill: none;
+  stroke: #9e9cc1;
+  stroke-width: 2;
+}
+
+.map__feature--label {
+  fill: #9e9cc1;
+}
+
+.map__space {
+  fill: var(--primary-color);
+  fill-opacity: 0.6;
+  transition: fill-opacity 0.8s;
+
+  &:hover {
+    fill: var(--secondary-color);
+  }
+}
+
+.map__space--selected {
+  fill: var(--accent-color);
+  stroke: var(--accent-color);
+  stroke-width: 5;
+}

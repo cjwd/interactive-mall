@@ -1,0 +1,31 @@
+/*=============================================
+=            #Directory            =
+=============================================*/
+.mall-container {
+  position: relative;
+  height: 100vh;
+}
+
+.mall-main {
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 300px);
+  height: 100%;
+}
+
+.mall {
+  pointer-events: none;
+  perspective: 3500px;
+  perspective-origin: 0% 50%;
+  transition: transform 0.8s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.mall--content-open {
+  transform: translate3d(0, -25%, 0) scale3d(0.8, 0.8, 1);
+}
+
+.open-search,
+.close-search {
+  display: none;
+}

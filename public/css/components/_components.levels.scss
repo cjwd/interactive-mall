@@ -1,0 +1,86 @@
+.levels {
+  position: relative;
+  transform: rotateX(70deg) rotateZ(-45deg) translateZ(-20vh);
+  transform-style: preserve-3d;
+}
+
+.level {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  pointer-events: auto;
+  transform-style: preserve-3d;
+  counter-increment: level-counter;
+  transition: opacity 1s, transform 1s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.level:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.level:before {
+  content: "L "attr(data-level);
+  position: absolute;
+  color: var(--secondary-color);
+  top: -45px;
+  left: 135px;
+  transform: rotateZ(40deg) rotateX(-70deg) translateZ(5vmin);
+  z-index: 100;
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+.level--current:before {
+  transform: rotateZ(0deg) rotateX(-70deg) translateZ(5vmin);
+}
+
+.level:hover .map__ground {
+  stroke: var(--secondary-color);
+}
+
+.level--current {
+  stroke: #e3edf0;
+}
+
+.level--1 {
+  transform: translateZ(100px);
+}
+
+.level--2 {
+  transform: translateZ(200px);
+}
+
+.level--current .map__space {
+  pointer-events: auto;
+  fill-opacity: 1;
+}
+
+.levels--open .level {
+  transition: transform 1s, opacity 1s;
+  transition-delay: 0s;
+}
+
+.level.level--current {
+  transform: translateZ(0vmin) rotate3d(0, 0, 1, 20deg);
+}
+
+.levels--selected-0 .level:not(.level--0),
+.levels--selected-1 .level:not(.level--1),
+.levels--selected-2 .level:not(.level--2) {
+  opacity: 0;
+}
+
+.levels--selected-0 .level--1,
+.levels--selected-0 .level--2,
+.levels--selected-1 .level--0,
+.levels--selected-1 .level--2,
+.levels--selected-2 .level--0,
+.levels--selected-2 .level--1 {
+  -webkit-transform: translateZ(-60vmin);
+  transform: translateZ(-60vmin);
+  pointer-events: none;
+}

@@ -1,0 +1,48 @@
+.mallnav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  transition: opacity 0.8s;
+}
+
+.mallnav--hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.boxbutton {
+  font-size: 2em;
+  display: block;
+  width: 2em;
+  height: 2em;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  border: 0;
+  background: #bcced7; //#d7d7dc;
+}
+
+.boxbutton:hover {
+  color: #788a93; //#515158;
+}
+
+.boxbutton--dark {
+  background: var(--accent-color); //#c4c4c7;
+}
+
+.boxbutton--darker {
+  background: #2c2c2f;
+}
+
+.boxbutton--alt {
+  background: #3d1975;
+}
+
+.boxbutton--disabled,
+.boxbutton--disabled:focus,
+.boxbutton--disabled:hover {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.2;
+}

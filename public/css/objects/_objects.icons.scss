@@ -1,0 +1,31 @@
+/*=============================================
+=            #Icons            =
+=============================================*/
+
+.icon {
+  display: block;
+  width: 1em;
+  height: 1em;
+  margin: 0 auto;
+  fill: currentColor;
+}
+
+.o-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.o-icon--24 {
+  font-size: 24px;
+}
+
+.o-icon--16 {
+  font-size: 24px;
+}
+
+/*=====  End of #Icons  ======*/

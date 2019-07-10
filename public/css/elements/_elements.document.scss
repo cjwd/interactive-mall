@@ -1,0 +1,18 @@
+/*=============================================
+=            #Variables            =
+=============================================*/
+
+:root {
+  --unit: 24px;
+  --unit-small: calc(var(--unit) * 0.5);
+  --unit-large: calc(var(--unit) * 2);
+  --primary-color: #007ac0;
+  --secondary-color: #342f80;
+  --tertiary-color: #485358;
+  --accent-color: #053a47;
+  --ground-fill: #e3edf0;
+  --feature-stroke: #9e9cc1;
+  --global-radius: 3px;
+}
+
+/*=====  End of #Variables  ======*/

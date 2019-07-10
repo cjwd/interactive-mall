@@ -1,0 +1,29 @@
+/*=============================================
+=            #Store Grid List            =
+=============================================*/
+
+.imm-store__title {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+}
+
+.imm-store__img {
+  width: 100%;
+  margin: 0;
+}
+
+.imm-store__img a {
+  display: block;
+}
+
+.imm-store__description {
+  margin-bottom: var(--unit);
+}
+
+.imm-store__categories {
+  margin-bottom: var(--unit);
+  padding: 0 !important;
+  list-style-type: none !important;
+}
+
+/*=====  End of Store List  ======*/
