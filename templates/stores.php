@@ -7,12 +7,22 @@ $args = [
 
 if ($atts->categories) {
   $categories = explode(',', $atts->categories);
-  $args['category__in'] = $categories;
+  $args['tax_query'] = [
+    [
+      'taxonomy'  => 'imm_store_category',
+      'terms' => $categories
+    ]
+  ];
 }
 
 if ($atts->exclude_categories) {
   $exclude_categories = explode(',', $atts->exclude_categories);
-  $args[ 'category__not_in'] = $exclude_categories;
+  $args['tax_query'] = [
+    [
+      'taxonomy'  => 'imm_store_category',
+      'terms' => $exclude_categories
+    ]
+  ];
 }
 
 $view = $atts->view;
