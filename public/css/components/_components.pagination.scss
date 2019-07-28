@@ -1,0 +1,70 @@
+/*=============================================
+=            #Pagination            =
+=============================================*/
+
+.c-pagination {
+  padding-top: var(--unit);
+  padding-bottom: var(--unit);
+  text-align: center;
+}
+
+.c-pagination__list {
+  margin-left: 0;
+  list-style: none;
+}
+
+.c-pagination__list li {
+  display: inline-block;
+
+  &.nextlink:last-child {
+    float: right;
+  }
+
+  &.prevlink:first-child {
+    float: left;
+  }
+}
+
+.page-numbers {
+  text-decoration: none;
+}
+
+.page-number-divider {
+  margin-left: var(--unit);
+  margin-right: var(--unit);
+  color: var(--feature-stroke);
+}
+
+.page-numbers.dots,
+.wp-pagenavi .extend {
+  margin-right: var(--unit);
+}
+
+/* WP Pagenav */
+.wp-pagenavi {
+  padding-top: var(--unit);
+  padding-bottom: var(--unit);
+  text-align: center;
+
+  .page-numbers:after,
+  .current:after {
+    display: inline-block;
+    content: '/';
+    margin-left: var(--unit);
+    margin-right: var(--unit);
+    color: var(--feature-stroke);
+  }
+
+  .prevlink {
+    float: left;
+  }
+
+  .nextlink {
+    float: right;
+  }
+}
+
+.prevlink,
+.nextlink {
+  text-decoration: none;
+}

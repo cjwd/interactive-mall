@@ -1,8 +1,11 @@
 <?php
 
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 $args = [
   'post_type' => 'imm_store',
-  'posts_per_page'  => (int)$atts->num_stores
+  'posts_per_page'  => (int)$atts->num_stores,
+  'paged' => $paged
 ];
 
 if ($atts->categories) {
@@ -51,4 +54,6 @@ if ( 'list' == $view ) {
       <?php endif; ?>
     </div>
   <?php endif; ?>
+
+  <?php posts_pagination($query->max_num_pages); ?>
 </div>
