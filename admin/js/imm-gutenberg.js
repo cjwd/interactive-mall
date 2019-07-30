@@ -346,6 +346,48 @@
     }
   });
 
+  registerBlockType('imm/store-size-block', {
+    title: 'Store Size',
+    icon: 'editor-expand',
+    category: 'common',
+
+    attributes: {
+      blockValue: {
+        type: 'string',
+        source: 'meta',
+        meta: 'imm_store_size'
+      }
+    },
+
+    edit: function (props) {
+      var className = props.className;
+      var setAttributes = props.setAttributes;
+
+      function updateBlockValue(blockValue) {
+        setAttributes({
+          blockValue
+        });
+      }
+
+      return el(
+        'div', {
+          className: className
+        },
+        el(TextControl, {
+          label: 'Store Size',
+          value: props.attributes.blockValue,
+          onChange: updateBlockValue
+        })
+      );
+    },
+
+    // No information saved to the block
+    // Data is saved to post meta via attributes
+    save: function () {
+      return null;
+    }
+  });
+
   registerBlockType('imm/store-hours-block', {
     title: 'Store Opening Hours',
     icon: 'clock',

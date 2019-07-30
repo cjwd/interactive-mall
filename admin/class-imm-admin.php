@@ -96,7 +96,7 @@ class Imm_Admin {
   public function enqueue_block_editor_scripts() {
     wp_enqueue_script(
         $this->plugin_name . '_block_scripts',
-        plugin_dir_url( __FILE__ ) . 'js/imm-gutenberg.js',
+        plugin_dir_url( __FILE__ ) . 'js/imm-gutenberg-min.js',
         ['wp-blocks', 'wp-element', 'wp-components', 'wp-editor', 'wp-i18n']
     );
   }
@@ -368,6 +368,16 @@ class Imm_Admin {
     register_post_meta(
       'imm_store',
       'imm_store_location',
+      [
+        'show_in_rest'  =>  true,
+        'single'  => true,
+        'type'  =>  'number'
+      ]
+    );
+
+    register_post_meta(
+      'imm_store',
+      'imm_store_size',
       [
         'show_in_rest'  =>  true,
         'single'  => true,
