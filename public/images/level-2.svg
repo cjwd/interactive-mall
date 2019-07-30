@@ -74,7 +74,6 @@
       <path class="map__space" data-space="2.61" transform="rotate(-90 844.32 199)" d="M815.32 224.68h58v-8l-43-44-15 15v37.64z"/>
       <path class="map__space" data-space="2.60" transform="rotate(-90 889 156.5)" d="M817.5 139.5h143v34h-143z"/>
       <path d="M595.5 113.5v-12h-55l-8 8 5 5c.51-.23 4.14 9.38 8 27h58v-28h-8z" class="map__space" data-space="2.59" transform="rotate(-90 568 121.5)"/>
-      <path class="map__space" data-space="2.58" transform="rotate(-90 1986.5 377)" d="M2039.5 321.5v46h48v40h3v23h-8l-42-24h-61v37h-37v12h-60v-123h49l-7-14 36-20 28 42h23v-19z"/>
       <path class="map__space" data-space="2.57" transform="rotate(-90 114 438.5)" d="M146.5 459.5v-42h-65v42z"/>
       <path class="map__space" data-space="2.56" transform="rotate(-90 1929 134)" d="M1929 88v46h-47v46h94V88z"/>
       <path class="map__space" data-space="2.55" transform="rotate(-90 152 148.5)" d="M172.5 112.5l-111 67 18 28 131-76h32v-42h-70z"/>
