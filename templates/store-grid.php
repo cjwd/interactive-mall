@@ -3,6 +3,7 @@ $btn_text = $atts->btn_text;
 $btn_url = $atts->btn_url;
 $map = get_post_meta($post->ID, 'imm_store_logo', true);
 $floor = get_post_meta($post->ID, 'imm_store_floor', true);
+$size = get_post_meta($post->ID, 'imm_store_size', true);
 ?>
 <div class="imm-store grid-item">
   <h4 class="imm-store__title"><?php the_title(); ?></h4>
@@ -44,8 +45,8 @@ $floor = get_post_meta($post->ID, 'imm_store_floor', true);
     </div>
   <?php endif; ?>
 
-  <?php if ( true == $atts->size ) : ?>
-    <p class="imm-store__meta imm-store__meta--size">Space: <?= $floor; ?></p>
+  <?php if ( true == $atts->size && !empty($size) ) : ?>
+    <p class="imm-store__meta imm-store__meta--size">Space: <?= $size; ?> Square Feet</p>
   <?php endif; ?>
 
   <?php if ( true == $atts->floor ) : ?>
