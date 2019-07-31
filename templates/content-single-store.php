@@ -60,9 +60,7 @@ $logo = get_post_meta($post->ID, 'imm_store_logo', true);
 
     <div class="store__meta flex flex--equal">
       <div class="store__meta-item">
-        <small><b>Location</b></small>
-        <p><img src="<?= $logo; ?>" /></p>
-        <p>Level <?= $floor; ?></p>
+        <p><b>Mall Floor:</b> Level <?= $floor; ?></p>
       </div>
     </div>
   </div>
