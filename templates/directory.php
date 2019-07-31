@@ -116,7 +116,7 @@ $query = new WP_Query( $args );
               <span class="store__meta-item"><b>Phone:</b> <?= $phone; ?></span>
             <?php endif; ?>
             <?php if( $website ) : ?>
-              <span class="store__meta-item"><b>Website:</b> <?= $website; ?></span>
+              <span class="store__meta-item"><b>Website:</b> <a href="<?= $website; ?>"><?= $website; ?></a></span>
             <?php endif; ?>
           </p>
           <div class="store__desc"><?php the_excerpt(); ?></div>
