@@ -20,6 +20,7 @@
   foreach ($terms as $term) :
     $stores = get_posts([
       'post_type' => 'imm_store',
+      'numberposts' => -1,
       'tax_query' => [
         [
           'taxonomy'  => 'imm_store_category',
