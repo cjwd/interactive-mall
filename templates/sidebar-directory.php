@@ -39,7 +39,7 @@
     ?>
       <li class="list__item" data-level="<?= $level ?>" data-space="<?php addZero($space); ?>" data-category="<?= $term->term_id; ?>" data-term="<?= $term->name; ?>">
         <a href="#" class="list__link"><?= $store->post_title; ?></a>
-        <span class="location-label"><?= $level . ' / ' . $space; ?></span>
+        <span class="location-label"><?= 'L' . $level; ?></span>
       </li>
     <?php endforeach; ?>
   <?php endforeach; ?>
