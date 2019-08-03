@@ -180,19 +180,20 @@ class Imm_Public {
     $atts = shortcode_atts([
       'title' => '',
       'num_stores'  => '3',
-      'map' => false,
-      'size' => false,
-      'floor' => false,
-      'image' => true,
-      'description'  => false,
-      'show_categories' => false,
+      'map' => 'false',
+      'size' => 'false',
+      'floor' => 'false',
+      'image' => 'true',
+      'description'  => 'false',
+      'show_categories' => 'false',
       'btn_text' => _x('View Store', 'imm'),
       'btn_url' =>  '',
       'link_text' =>  _x('View All', 'imm'),
       'link_url'  =>  '',
       'view'  => 'grid',
       'categories' => '',
-      'exclude_categories' => ''
+      'exclude_categories' => '',
+      'show_pagination' => 'true'
     ], $atts, 'imm_stores');
 
     $template_loader = new IMM_Template_Loader;

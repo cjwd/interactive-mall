@@ -55,5 +55,9 @@ if ( 'list' == $view ) {
     </div>
   <?php endif; ?>
 
-  <?php posts_pagination($query->max_num_pages); ?>
+  <?php
+  if( "true" == $atts->show_pagination) {
+    posts_pagination($query->max_num_pages);
+  }
+  ?>
 </div>
