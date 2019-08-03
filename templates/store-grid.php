@@ -8,7 +8,7 @@ $size = get_post_meta($post->ID, 'imm_store_size', true);
 <div class="imm-store grid-item">
   <h4 class="imm-store__title"><?php the_title(); ?></h4>
 
-  <?php if ( has_post_thumbnail() && (true == $atts->image) ) : ?>
+  <?php if ( has_post_thumbnail() && ("true" == $atts->image) ) : ?>
     <figure class="imm-store__img">
       <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
         <?php the_post_thumbnail(); ?>
@@ -16,7 +16,7 @@ $size = get_post_meta($post->ID, 'imm_store_size', true);
     </figure>
   <?php endif; ?>
 
-  <?php if ( true == $atts->show_categories) : ?>
+  <?php if ( "true" == $atts->show_categories) : ?>
     <ul class="imm-store__categories">
     <?php
     $categories = get_categories( array(
@@ -39,17 +39,17 @@ $size = get_post_meta($post->ID, 'imm_store_size', true);
     </ul>
   <?php endif; ?>
 
-  <?php if ( true == $atts->description ) : ?>
+  <?php if ( "true" == $atts->description ) : ?>
     <div class="imm-store__description">
       <?php the_excerpt(); ?>
     </div>
   <?php endif; ?>
 
-  <?php if ( true == $atts->size && !empty($size) ) : ?>
+  <?php if ( "true" == $atts->size && !empty($size) ) : ?>
     <p class="imm-store__meta imm-store__meta--size">Space: <?= $size; ?> Square Feet</p>
   <?php endif; ?>
 
-  <?php if ( true == $atts->floor ) : ?>
+  <?php if ( "true" == $atts->floor ) : ?>
     <p class="store__meta imm-store__meta--level">Level: <?= $floor; ?></p>
   <?php endif; ?>
 
