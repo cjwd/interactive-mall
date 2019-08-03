@@ -10,10 +10,11 @@
   <ul class="list list--groupByCategory">
   <?php
   $leases_category = get_option('imm_options')['lease_category'];
+  $featured_category = get_option('imm_options')['featured_category'];
 
   $terms = get_terms( [
     "taxonomy"  => "imm_store_category",
-    "exclude" =>  $leases_category,
+    "exclude" =>  [$leases_category,$featured_category],
     "orderby" => "name"
   ]);
 
