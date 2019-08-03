@@ -4,6 +4,7 @@
 
 :root {
   --unit: 24px;
+  --unit-tiny: calc(var(--unit) * .25);
   --unit-small: calc(var(--unit) * 0.5);
   --unit-large: calc(var(--unit) * 2);
   --primary-color: #007ac0;

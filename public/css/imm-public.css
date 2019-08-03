@@ -4,6 +4,7 @@
 =============================================*/
 :root {
   --unit: 24px;
+  --unit-tiny: calc(var(--unit) * .25);
   --unit-small: calc(var(--unit) * 0.5);
   --unit-large: calc(var(--unit) * 2);
   --primary-color: #007ac0;
@@ -131,6 +132,7 @@ button svg {
 .pill {
   display: inline-block;
   margin-bottom: var(--unit);
+  margin-right: var(--unit-tiny);
   padding: 5px 10px;
   line-height: 1;
   border-radius: 30px;
