@@ -17,9 +17,9 @@ $size = get_post_meta($post->ID, 'imm_store_size', true);
   <?php endif; ?>
 
   <?php if ( "true" == $atts->show_categories) : ?>
-    <ul class="imm-store__categories">
+    <div class="imm-store__categories">
     <?php
-    $categories = get_categories( array(
+    $categories = get_terms( array(
         'object_ids'  => $post->ID,
         'orderby' => 'name',
         'order'   => 'ASC'
@@ -27,16 +27,16 @@ $size = get_post_meta($post->ID, 'imm_store_size', true);
 
     foreach( $categories as $category ) {
         $category_link = sprintf(
-            '<a href="%1$s" alt="%2$s">%3$s</a>',
+            '<a class="pill" href="%1$s" alt="%2$s">%3$s</a>',
             esc_url( get_category_link( $category->term_id ) ),
             esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
             esc_html( $category->name )
         );
 
-        echo '<li>' . sprintf( esc_html__( 'Category: %s', 'textdomain' ), $category_link ) . '</li> ';
+        echo $category_link;
     }
     ?>
-    </ul>
+    </div>
   <?php endif; ?>
 
   <?php if ( "true" == $atts->description ) : ?>
