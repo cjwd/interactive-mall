@@ -211,7 +211,6 @@ class Imm {
     $this->loader->add_filter('template_include', $plugin_public, 'locate_directory_template');
 
     // Shortcodes
-    $this->loader->add_shortcode('imm_directory', $plugin_public, 'imm_directory_shortcode');
     $this->loader->add_shortcode('imm_stores', $plugin_public, 'imm_stores_shortcode');
 
     // Content Wrapper
