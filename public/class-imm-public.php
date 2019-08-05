@@ -169,7 +169,7 @@ class Imm_Public {
   }
 
   /**
-   * Hook for imm_store_list shortcode tag
+   * Hook for imm_stores shortcode tag
    *
    * @param array $atts
    * @return void
