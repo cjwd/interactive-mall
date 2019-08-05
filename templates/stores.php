@@ -23,7 +23,8 @@ if ($atts->exclude_categories) {
   $args['tax_query'] = [
     [
       'taxonomy'  => 'imm_store_category',
-      'terms' => $exclude_categories
+      'terms' => $exclude_categories,
+      'operator' => 'NOT IN'
     ]
   ];
 }
