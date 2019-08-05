@@ -208,6 +208,7 @@ class Imm {
 
     // Locate Templates
     $this->loader->add_filter('template_include', $plugin_public, 'find_template');
+    $this->loader->add_filter('template_include', $plugin_public, 'find_tax_template');
     $this->loader->add_filter('template_include', $plugin_public, 'locate_directory_template');
 
     // Shortcodes

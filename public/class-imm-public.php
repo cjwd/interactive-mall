@@ -118,6 +118,42 @@ class Imm_Public {
     return $template;
   }
 
+  /**
+   * Load templates for store taxonomy archive pages from the plugin, if none
+   * available in the appropriate theme directory
+   *
+   * Hooked into template_include
+   *
+   * @param string $template
+   * @return void
+   * @link https://www.ibenic.com/include-or-override-wordpress-templates/
+   */
+  public function find_tax_template( $template ) {
+    $new_template = '';
+
+    $my_taxonomies = array( 'imm_store_category' );
+
+    if( ! is_tax( $my_taxonomies) ) {
+      return $template;
+    }
+
+    if( is_tax('imm_store_category') ) {
+      $new_template = 'taxonomy.php';
+    }
+
+    if( $theme_template = locate_template('imm/' . $new_template ) ) {
+      return $theme_template;
+    } else {
+      $plugin_template = IMM_PLUGIN_TEMPLATE_DIR . $new_template;
+
+      if( file_exists( $plugin_template ) ) {
+        return $plugin_template;
+      }
+    }
+
+    return $template;
+  }
+
   public function locate_directory_template( $template ) {
     $new_template = '';
     $mall_page = get_option('imm_options')['mallpage'];
