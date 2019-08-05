@@ -147,26 +147,6 @@ class Imm_Public {
     return $template;
   }
 
-  /**
-   * Hook for imm_directory shortcode tag
-   *
-   * @param array $atts
-   * @return void
-   */
-  public function imm_directory_shortcode($atts = []) {
-    $atts = array_change_key_case((array)$atts, CASE_LOWER);
-
-    $atts = shortcode_atts([
-      'view'	=> '',
-    ], $atts, 'imm_directory');
-
-    $template_loader = new IMM_Template_Loader;
-    ob_start();
-    $template_loader
-      ->set_template_data($atts, 'atts')
-      ->get_template_part( 'directory' );
-    return ob_get_clean();
-  }
 
   /**
    * Hook for imm_stores shortcode tag
