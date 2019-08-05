@@ -42,7 +42,13 @@ function imm_section_maps_render() {
 
 
 
-
+/**
+ * Markup for map layout settings field
+ * Setting to be implemented in version 2.0.0
+ *
+ * @param [type] $args
+ * @return void
+ */
 function imm_field_layout_render( $args ) {
   $options = (array)get_option('imm_options');
 
@@ -143,7 +149,14 @@ function imm_field_featured_category_render( $args ) {
 
 
 
-
+/**
+ * Markup to render a file upload field
+ * for the map background
+ *
+ * Setting to be implemented in version 2.0.0
+ *
+ * @return void
+ */
 function imm_field_surroundings_map_render() {
   $options = get_option('imm_options');
   $map = $options['surroundings'];

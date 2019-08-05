@@ -463,13 +463,14 @@ class Imm_Admin {
      */
 
     // Layout: Grid or Map
-    add_settings_field(
-      'imm_field_layout',           // The ID or name of the field
-      __('Layout', 'imm'),          // The text used to label the field
-      'imm_field_layout_render',    // The callback function used to render the field
-      'imm-settings',               // The page on which the field will be rendered
-      'imm_section_general'         // The section to which  the field will be rendered
-    );
+    // @todo In Version 2
+    // add_settings_field(
+    //   'imm_field_layout',           // The ID or name of the field
+    //   __('Layout', 'imm'),          // The text used to label the field
+    //   'imm_field_layout_render',    // The callback function used to render the field
+    //   'imm-settings',               // The page on which the field will be rendered
+    //   'imm_section_general'         // The section to which  the field will be rendered
+    // );
 
     add_settings_field(
       'imm_field_mallpage',           // The ID or name of the field
@@ -498,13 +499,14 @@ class Imm_Admin {
     );
 
     // Maps SVG Code
-    add_settings_field(
-      'imm_field_surroundings_map',
-      __('Surroundings Map', 'imm'),
-      'imm_field_surroundings_map_render',
-      'imm-settings',
-      'imm_section_maps'
-    );
+    // @todo Version 2
+    // add_settings_field(
+    //   'imm_field_surroundings_map',
+    //   __('Surroundings Map', 'imm'),
+    //   'imm_field_surroundings_map_render',
+    //   'imm-settings',
+    //   'imm_section_maps'
+    // );
 
 
     add_settings_field(
