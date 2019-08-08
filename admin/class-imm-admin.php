@@ -96,8 +96,8 @@ class Imm_Admin {
   public function enqueue_block_editor_scripts() {
     wp_enqueue_script(
         $this->plugin_name . '_block_scripts',
-        plugin_dir_url( __FILE__ ) . 'js/imm-gutenberg-min.js',
-        ['wp-blocks', 'wp-element', 'wp-components', 'wp-editor', 'wp-i18n']
+        plugin_dir_url( __FILE__ ) . 'js/editor.js',
+        ['wp-blocks', 'wp-element', 'wp-components', 'wp-editor', 'wp-i18n', 'wp-plugins', 'wp-edit-post']
     );
   }
 
@@ -276,7 +276,7 @@ class Imm_Admin {
       'label'                 => __( 'Deal', 'imm' ),
       'description'           => __( 'Store Deals', 'imm' ),
       'labels'                => $labels,
-      'supports'              => array( 'title', 'thumbnail', 'custom-fields' ),
+      'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
       'taxonomies'            => array( 'category' ),
       'hierarchical'          => false,
       'public'                => true,
@@ -412,6 +412,35 @@ class Imm_Admin {
         'show_in_rest'  =>  true,
         'single'  =>  true,
         'type'  =>  'string'
+      ]
+    );
+
+    /**
+     * Store Deal Post Meta
+     */
+    register_post_meta(
+      'imm_deal',
+      '_imm_deal_expirydate',
+      [
+        'show_in_rest' => true,
+        'single' => true,
+        'type' => 'string',
+        'auth_callback' => function() {
+          return current_user_can( 'edit_posts' );
+        }
+      ]
+    );
+
+    register_post_meta(
+      'imm_deal',
+      '_imm_deal_store',
+      [
+        'show_in_rest' => true,
+        'single' => true,
+        'type' => 'string',
+        'auth_callback' => function() {
+          return current_user_can( 'edit_posts' );
+        }
       ]
     );
   }
