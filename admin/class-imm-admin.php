@@ -459,6 +459,29 @@ class Imm_Admin {
   }
 
   /**
+   * Add custom category for store meta block
+   *
+   * @param array $categories
+   * @param object $post
+   * @return void
+   */
+  function imm_store_block_categories( $categories, $post ) {
+    if ( $post->post_type !== 'imm_store' ) {
+        return $categories;
+    }
+    return array_merge(
+        $categories,
+        array(
+            array(
+                'slug' => 'imm-store-meta-blocks-category',
+                'title' => __( 'Mall Store Meta', 'imm' ),
+                'icon'  => 'feedback',
+            ),
+        )
+    );
+  }
+
+  /**
    * Register settings pages, sections and fields
    *
    * @since 1.0.0

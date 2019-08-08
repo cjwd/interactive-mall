@@ -6,7 +6,7 @@ import { TextControl, ColorPicker, Button } from "@wordpress/components";
 registerBlockType("imm/store-phone-block", {
   title: "Store Phone Number",
   icon: "phone",
-  category: "common",
+  category: "imm-store-meta-blocks-category",
 
   attributes: {
     blockValue: {
@@ -42,7 +42,7 @@ registerBlockType("imm/store-phone-block", {
 registerBlockType("imm/store-email-block", {
   title: "Store Email",
   icon: "email",
-  category: "common",
+  category: "imm-store-meta-blocks-category",
 
   attributes: {
     blockValue: {
@@ -78,7 +78,7 @@ registerBlockType("imm/store-email-block", {
 registerBlockType("imm/store-website-block", {
   title: "Store Website",
   icon: "admin-links",
-  category: "common",
+  category: "imm-store-meta-blocks-category",
 
   attributes: {
     blockValue: {
@@ -115,7 +115,7 @@ registerBlockType("imm/store-website-block", {
 registerBlockType("imm/store-facebook-block", {
   title: "Facebook Page Url",
   icon: "admin-links",
-  category: "common",
+  category: "imm-store-meta-blocks-category",
 
   attributes: {
     blockValue: {
@@ -152,7 +152,7 @@ registerBlockType("imm/store-facebook-block", {
 registerBlockType("imm/store-twitter-block", {
   title: "Twitter Page Url",
   icon: "admin-links",
-  category: "common",
+  category: "imm-store-meta-blocks-category",
 
   attributes: {
     blockValue: {
@@ -189,7 +189,7 @@ registerBlockType("imm/store-twitter-block", {
 registerBlockType("imm/store-instagram-block", {
   title: "Instagram Page Url",
   icon: "admin-links",
-  category: "common",
+  category: "imm-store-meta-blocks-category",
 
   attributes: {
     blockValue: {
@@ -226,7 +226,7 @@ registerBlockType("imm/store-instagram-block", {
 registerBlockType("imm/store-floor-block", {
   title: "Mall Floor",
   icon: "sort",
-  category: "common",
+  category: "imm-store-meta-blocks-category",
 
   attributes: {
     blockValue: {
@@ -263,7 +263,7 @@ registerBlockType("imm/store-floor-block", {
 registerBlockType("imm/store-location-block", {
   title: "Store Location",
   icon: "location-alt",
-  category: "common",
+  category: "imm-store-meta-blocks-category",
 
   attributes: {
     blockValue: {
@@ -300,7 +300,7 @@ registerBlockType("imm/store-location-block", {
 registerBlockType("imm/store-size-block", {
   title: "Store Size",
   icon: "editor-expand",
-  category: "common",
+  category: "imm-store-meta-blocks-category",
 
   attributes: {
     blockValue: {
@@ -336,7 +336,7 @@ registerBlockType("imm/store-size-block", {
 registerBlockType("imm/store-hours-block", {
   title: "Store Opening Hours",
   icon: "clock",
-  category: "common",
+  category: "imm-store-meta-blocks-category",
 
   attributes: {
     blockValue: {
@@ -374,7 +374,7 @@ registerBlockType("imm/store-hours-block", {
 registerBlockType("imm/store-logo-block", {
   title: "Store Logo",
   icon: "format-image",
-  category: "common",
+  category: "imm-store-meta-blocks-category",
 
   attributes: {
     logoID: {
@@ -427,7 +427,7 @@ registerBlockType("imm/store-logo-block", {
 registerBlockType("imm/store-map-block", {
   title: "Store Map",
   icon: "format-image",
-  category: "common",
+  category: "imm-store-meta-blocks-category",
 
   attributes: {
     mapID: {
@@ -480,7 +480,7 @@ registerBlockType("imm/store-map-block", {
 registerBlockType("imm/store-color-block", {
   title: "Store Brand Color",
   icon: "admin-appearance",
-  category: "common",
+  category: "imm-store-meta-blocks-category",
 
   attributes: {
     blockValue: {
