@@ -73,16 +73,35 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/admin/js/imm-gutenberg.js": {
+	"/admin/js/imm-gutenberg-min.deps.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/admin/js/imm-gutenberg-min.deps-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/admin/js/imm-gutenberg-min.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/admin/js/imm-gutenberg-min.js",
+		"oAP": "/admin/js/imm-gutenberg-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/admin/js/imm-gutenberg.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/admin/js/imm-gutenberg-min.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
 		},
 	"/admin/partials/fields/layout.php": {
 		"cB": 0,
@@ -251,6 +270,20 @@
 		"oA": 0,
 		"oAP": "/LICENSE.txt",
 		"oF": 0
+		},
+	"/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "/build/node_modules",
+		"oF": 0
+		},
+	"/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"/public/class-imm-public.php": {
 		"cB": 0,
@@ -792,12 +825,39 @@
 		"oAP": "/templates/stores.php",
 		"oF": 0
 		},
+	"/templates/taxonomy.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/taxonomy.php",
+		"oF": 0
+		},
 	"/uninstall.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/uninstall.php",
+		"oF": 0
+		},
+	"/webpack.config.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/webpack.config-min.js",
+		"oF": 1,
+		"sC": 0,
+		"tS": 0
+		},
+	"/yarn.lock": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/yarn.lock",
 		"oF": 0
 		}
 	},
