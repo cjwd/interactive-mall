@@ -1,0 +1,22 @@
+{
+  "name": "imm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cjwd/interactive-mall.git",
+  "author": "cjwd <chinarakinda@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^3.4.0"
+  },
+  "dependencies": {
+    "@wordpress/blocks": "^6.5.0",
+    "@wordpress/components": "^8.1.0",
+    "@wordpress/editor": "^9.5.0",
+    "@wordpress/i18n": "^3.6.0"
+  }
+}
