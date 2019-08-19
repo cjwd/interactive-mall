@@ -42,9 +42,11 @@ $btn_url = $atts->btn_url;
     </div>
   <?php endif; ?>
 
-  <?php if ( $btn_url ) : ?>
-    <a href="<?= $btn_url . '?deal=' . $post->ID; ?>" class="button button-primary is-primary"><?= $btn_text; ?></a>
-  <?php else: ?>
-    <a href="<?php the_permalink(); ?>" class="button button-primary is-primary"><?= $btn_text; ?></a>
+  <?php if ( "true" == "$atts->show_button") : ?>
+    <?php if ( $btn_url ) : ?>
+      <a href="<?= $btn_url . '?deal=' . $post->ID; ?>" class="button button-primary is-primary"><?= $btn_text; ?></a>
+    <?php else: ?>
+      <a href="<?php the_permalink(); ?>" class="button button-primary is-primary"><?= $btn_text; ?></a>
+    <?php endif; ?>
   <?php endif; ?>
 </div>

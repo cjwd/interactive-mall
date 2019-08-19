@@ -237,6 +237,7 @@ class Imm_Public {
       'show_image' => 'true',
       'show_description'  => 'false',
       'show_categories' => 'false',
+      'show_button' => 'true',
       'btn_text' => _x('Deal Details', 'imm'),
       'btn_url' =>  '',
       'link_text' =>  _x('View All Deals', 'imm'),
