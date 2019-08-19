@@ -50,10 +50,10 @@ if ( 'list' == $view ) {
       <?php while ( $query->have_posts() ) : $query->the_post(); ?>
         <?php gcm_display_stores_list($atts, $view); ?>
       <?php endwhile; wp_reset_postdata(); ?>
-      <?php if ( $link_url ) : ?>
-        <a href="<?= $link_url; ?>" class="button button-primary is-primary"><?= $link_text; ?></a>
-      <?php endif; ?>
     </div>
+    <?php if ( $link_url ) : ?>
+      <a href="<?= $link_url; ?>" class="button button-primary is-primary"><?= $link_text; ?></a>
+    <?php endif; ?>
   <?php endif; ?>
 
   <?php
