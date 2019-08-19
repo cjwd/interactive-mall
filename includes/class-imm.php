@@ -186,6 +186,7 @@ class Imm {
     $this->loader->add_action( 'init', $plugin_admin, 'imm_deal_post_type', 0);
 
     $this->loader->add_action( 'init', $plugin_admin, 'imm_store_category_taxonomy', 0);
+    $this->loader->add_action( 'init', $plugin_admin, 'imm_deal_category_taxonomy', 0);
 
     $this->loader->add_action( 'widgets_init', $plugin_admin, 'imm_register_widget_store_list' );
     $this->loader->add_filter( 'block_categories', $plugin_admin, 'imm_store_block_categories', 10, 2 );
@@ -214,6 +215,7 @@ class Imm {
 
     // Shortcodes
     $this->loader->add_shortcode('imm_stores', $plugin_public, 'imm_stores_shortcode');
+    $this->loader->add_shortcode('imm_deals', $plugin_public, 'imm_deals_shortcode');
 
     // Content Wrapper
     $this->loader->add_action( 'imm_before_main_content', $plugin_public, 'output_content_wrapper' );

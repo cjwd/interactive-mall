@@ -72,6 +72,19 @@ function gcm_display_stores_list( $atts, $view = 'grid' ) {
 }
 
 
+function gcm_display_deals_list( $atts, $view = 'grid' ) {
+  $template_loader = new IMM_Template_Loader;
+
+  $template_part = ('list' == $view) ? 'deal-list' : 'deal-grid';
+
+  ob_start();
+  $template_loader
+    ->set_template_data( $atts, 'atts')
+    ->get_template_part($template_part);
+  echo ob_get_clean();
+}
+
+
 function addZero($string, $num = 1) {
   if( strlen(substr(strrchr($string, "."), 1)) == $num) {
     echo sprintf("%0.2f",$string);

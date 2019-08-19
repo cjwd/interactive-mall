@@ -277,7 +277,7 @@ class Imm_Admin {
       'description'           => __( 'Store Deals', 'imm' ),
       'labels'                => $labels,
       'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
-      'taxonomies'            => array( 'category' ),
+      'taxonomies'            => array( 'imm_deal_category' ),
       'hierarchical'          => false,
       'public'                => true,
       'show_ui'               => true,
@@ -295,6 +295,56 @@ class Imm_Admin {
       'show_in_rest'          => true,
     );
     register_post_type( 'imm_deal', $args );
+
+  }
+
+  /**
+   * Register custom taxonomy for store deals
+   *
+   * @since 1.0.0
+   * @return void
+   */
+  function imm_deal_category_taxonomy() {
+
+    $labels = array(
+      'name'                       => _x( 'Deal Categories', 'Taxonomy General Name', 'imm' ),
+      'singular_name'              => _x( 'Deal Category', 'Taxonomy Singular Name', 'imm' ),
+      'menu_name'                  => __( 'Deal Categories', 'imm' ),
+      'all_items'                  => __( 'All Deal Categories', 'imm' ),
+      'parent_item'                => __( 'Parent Deal Category', 'imm' ),
+      'parent_item_colon'          => __( 'Parent Deal Category:', 'imm' ),
+      'new_item_name'              => __( 'New Deal Category Name', 'imm' ),
+      'add_new_item'               => __( 'Add New Deal Category', 'imm' ),
+      'edit_item'                  => __( 'Edit Deal Category', 'imm' ),
+      'update_item'                => __( 'Update Deal Category', 'imm' ),
+      'view_item'                  => __( 'View Deal Category', 'imm' ),
+      'separate_items_with_commas' => __( 'Separate deals category with commas', 'imm' ),
+      'add_or_remove_items'        => __( 'Add or remove deals categories', 'imm' ),
+      'choose_from_most_used'      => __( 'Choose from the most used', 'imm' ),
+      'popular_items'              => __( 'Popular Deal Categories', 'imm' ),
+      'search_items'               => __( 'Search Deal Categories', 'imm' ),
+      'not_found'                  => __( 'Not Found', 'imm' ),
+      'no_terms'                   => __( 'No deal categories', 'imm' ),
+      'items_list'                 => __( 'Deal Categories list', 'imm' ),
+      'items_list_navigation'      => __( 'Deal Categories list navigation', 'imm' ),
+    );
+    $rewrite = array(
+      'slug'                       => 'deal-category',
+      'with_front'                 => true,
+      'hierarchical'               => true,
+    );
+    $args = array(
+      'labels'                     => $labels,
+      'hierarchical'               => true,
+      'public'                     => true,
+      'show_ui'                    => true,
+      'show_admin_column'          => true,
+      'show_in_nav_menus'          => true,
+      'show_tagcloud'              => true,
+      'rewrite'                    => $rewrite,
+      'show_in_rest'               => true,
+    );
+    register_taxonomy( 'imm_deal_category', array( 'imm_deal' ), $args );
 
   }
 

@@ -221,6 +221,41 @@ class Imm_Public {
 
   }
 
+
+  /**
+   * Hook for imm_deals shortcode tag
+   *
+   * @param array $atts
+   * @return void
+   */
+  public function imm_deals_shortcode($atts = []) {
+    $atts = array_change_key_case((array)$atts, CASE_LOWER);
+
+    $atts = shortcode_atts([
+      'title' => '',
+      'num_deals'  => '3',
+      'show_image' => 'true',
+      'show_description'  => 'false',
+      'show_categories' => 'false',
+      'btn_text' => _x('Deal Details', 'imm'),
+      'btn_url' =>  '',
+      'link_text' =>  _x('View All Deals', 'imm'),
+      'link_url'  =>  '',
+      'view'  => 'grid',
+      'categories' => '',
+      'exclude_categories' => '',
+      'show_pagination' => 'true'
+    ], $atts, 'imm_deals');
+
+    $template_loader = new IMM_Template_Loader;
+    ob_start();
+    $template_loader
+      ->set_template_data($atts, 'atts')
+      ->get_template_part( 'deals' );
+    return ob_get_clean();
+
+  }
+
   /**
    * Parse token variables in enclosing shortcode tags and replace with appropriate markup
    *
