@@ -1,6 +1,9 @@
 <?php
 $btn_text = $atts->btn_text;
 $btn_url = $atts->btn_url;
+$expiry_date = get_field('imm_deal_expiry_date');
+$associated_store= get_field('imm_deal_associated_store')[0]->post_title;
+
 ?>
 <div class="imm-store grid-item">
   <h4 class="imm-store__title"><?php the_title(); ?></h4>
@@ -41,6 +44,9 @@ $btn_url = $atts->btn_url;
       <?php the_excerpt(); ?>
     </div>
   <?php endif; ?>
+
+  <p class="imm-store__meta imm-store__meta--size">Expiry Date: <?php the_field('imm_deal_expiry_date'); ?></p>
+  <p class="imm-store__meta imm-store__meta--size">Offer By: <?= $associated_store; ?></p>
 
   <?php if ( "true" == "$atts->show_button") : ?>
     <?php if ( $btn_url ) : ?>
