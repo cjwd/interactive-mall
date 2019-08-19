@@ -1,1 +1,691 @@
-!function(e){var t={};function o(r){if(t[r])return t[r].exports;var a=t[r]={i:r,l:!1,exports:{}};return e[r].call(a.exports,a,a.exports,o),a.l=!0,a.exports}o.m=e,o.c=t,o.d=function(e,t,r){o.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:r})},o.r=function(e){Object.defineProperty(e,"__esModule",{value:!0})},o.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return o.d(t,"a",t),t},o.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},o.p="",o(o.s=5)}([function(e,t){!function(){e.exports=this.wp.element}()},function(e,t){!function(){e.exports=this.wp.i18n}()},function(e,t){!function(){e.exports=this.wp.blocks}()},function(e,t){!function(){e.exports=this.wp.components}()},function(e,t){!function(){e.exports=this.wp.editor}()},function(e,t,o){"use strict";o.r(t);var r=o(0),a=o(1),c=o(2),l=o(4),n=o(3);Object(c.registerBlockType)("imm/store-phone-block",{title:"Store Phone Number",icon:"phone",category:"imm-store-meta-blocks-category",attributes:{blockValue:{type:"string",source:"meta",meta:"imm_store_phone"}},edit:function(e){var t=e.className,o=e.setAttributes,c=e.attributes;return Object(r.createElement)("div",{className:t},Object(r.createElement)(n.TextControl,{label:Object(a.__)("Store Phone Number","imm"),value:c.blockValue,onChange:function(e){o({blockValue:e})}}))},save:function(){return null}}),Object(c.registerBlockType)("imm/store-email-block",{title:"Store Email",icon:"email",category:"imm-store-meta-blocks-category",attributes:{blockValue:{type:"string",source:"meta",meta:"imm_store_email"}},edit:function(e){var t=e.className,o=e.setAttributes,c=e.attributes;return Object(r.createElement)("div",{className:t},Object(r.createElement)(n.TextControl,{label:Object(a.__)("Store Email","imm"),value:c.blockValue,onChange:function(e){o({blockValue:e})}}))},save:function(){return null}}),Object(c.registerBlockType)("imm/store-website-block",{title:"Store Website",icon:"admin-links",category:"imm-store-meta-blocks-category",attributes:{blockValue:{type:"string",source:"meta",meta:"imm_store_website"}},edit:function(e){var t=e.className,o=e.setAttributes,c=e.attributes;return Object(r.createElement)("div",{className:t},Object(r.createElement)(n.TextControl,{label:Object(a.__)("Store Website","imm"),value:c.blockValue,onChange:function(e){o({blockValue:e})},type:"url"}))},save:function(){return null}}),Object(c.registerBlockType)("imm/store-facebook-block",{title:"Facebook Page Url",icon:"admin-links",category:"imm-store-meta-blocks-category",attributes:{blockValue:{type:"string",source:"meta",meta:"imm_store_facebook"}},edit:function(e){var t=e.className,o=e.setAttributes,c=e.attributes;return Object(r.createElement)("div",{className:t},Object(r.createElement)(n.TextControl,{label:Object(a.__)("Facebook Page URL","imm"),value:c.blockValue,onChange:function(e){o({blockValue:e})},type:"url"}))},save:function(){return null}}),Object(c.registerBlockType)("imm/store-twitter-block",{title:"Twitter Page Url",icon:"admin-links",category:"imm-store-meta-blocks-category",attributes:{blockValue:{type:"string",source:"meta",meta:"imm_store_twitter"}},edit:function(e){var t=e.className,o=e.setAttributes,c=e.attributes;return Object(r.createElement)("div",{className:t},Object(r.createElement)(n.TextControl,{label:Object(a.__)("Twitter Page URL","imm"),value:c.blockValue,onChange:function(e){o({blockValue:e})},type:"url"}))},save:function(){return null}}),Object(c.registerBlockType)("imm/store-instagram-block",{title:"Instagram Page Url",icon:"admin-links",category:"imm-store-meta-blocks-category",attributes:{blockValue:{type:"string",source:"meta",meta:"imm_store_instagram"}},edit:function(e){var t=e.className,o=e.setAttributes,c=e.attributes;return Object(r.createElement)("div",{className:t},Object(r.createElement)(n.TextControl,{label:Object(a.__)("Instagram Page URL","imm"),value:c.blockValue,onChange:function(e){o({blockValue:e})},type:"url"}))},save:function(){return null}}),Object(c.registerBlockType)("imm/store-floor-block",{title:"Mall Floor",icon:"sort",category:"imm-store-meta-blocks-category",attributes:{blockValue:{type:"integer",source:"meta",meta:"imm_store_floor"}},edit:function(e){var t=e.className,o=e.setAttributes,c=e.attributes;return Object(r.createElement)("div",{className:t},Object(r.createElement)(n.TextControl,{label:Object(a.__)("Mall Floor","imm"),value:c.blockValue,onChange:function(e){o({blockValue:e})},type:"number"}))},save:function(){return null}}),Object(c.registerBlockType)("imm/store-location-block",{title:"Store Location",icon:"location-alt",category:"imm-store-meta-blocks-category",attributes:{blockValue:{type:"number",source:"meta",meta:"imm_store_location"}},edit:function(e){var t=e.className,o=e.setAttributes,c=e.attributes;return Object(r.createElement)("div",{className:t},Object(r.createElement)(n.TextControl,{label:Object(a.__)("Store Location","imm"),value:c.blockValue,onChange:function(e){o({blockValue:e})},type:"number"}))},save:function(){return null}}),Object(c.registerBlockType)("imm/store-size-block",{title:"Store Size",icon:"editor-expand",category:"imm-store-meta-blocks-category",attributes:{blockValue:{type:"string",source:"meta",meta:"imm_store_size"}},edit:function(e){var t=e.className,o=e.setAttributes,c=e.attributes;return Object(r.createElement)("div",{className:t},Object(r.createElement)(n.TextControl,{label:Object(a.__)("Store Size","imm"),value:c.blockValue,onChange:function(e){o({blockValue:e})}}))},save:function(){return null}}),Object(c.registerBlockType)("imm/store-hours-block",{title:"Store Opening Hours",icon:"clock",category:"imm-store-meta-blocks-category",attributes:{blockValue:{type:"array",source:"meta",meta:"imm_store_hours"}},edit:function(e){var t=e.className,o=e.setAttributes,c=e.attributes;return Object(r.createElement)(l.RichText,{label:Object(a.__)("Store Opening Hours","imm"),tagName:"ul",multiline:"li",placeholder:Object(a.__)("Monday - Friday 10am - 7pm","imm"),value:c.blockValue,className:t,onChange:function(e){o({blockValue:e})}})},save:function(){return null}}),Object(c.registerBlockType)("imm/store-logo-block",{title:"Store Logo",icon:"format-image",category:"imm-store-meta-blocks-category",attributes:{logoID:{type:"number"},logoURL:{type:"string",source:"meta",meta:"imm_store_logo"}},edit:function(e){var t=e.setAttributes,o=e.attributes;return Object(r.createElement)(r.Fragment,null,Object(r.createElement)("h3",null,Object(a.__)("Store Logo","imm")),Object(r.createElement)(l.MediaUpload,{onSelect:function(e){return t({logoURL:e.url,logoID:e.id})},allowedTypes:"image",value:o.logoID,render:function(e){return Object(r.createElement)(n.Button,{className:o.logoID?"image-button":"button button-large",onClick:e.open},o.logoID?Object(r.createElement)("img",{src:o.logoURL}):Object(a.__)("Upload Image","imm"))}}))},save:function(){return null}}),Object(c.registerBlockType)("imm/store-map-block",{title:"Store Map",icon:"format-image",category:"imm-store-meta-blocks-category",attributes:{mapID:{type:"number"},mapURL:{type:"string",source:"meta",meta:"imm_store_map"}},edit:function(e){var t=e.setAttributes,o=e.attributes;return Object(r.createElement)(r.Fragment,null,Object(r.createElement)("h3",null,Object(a.__)("Store Map","imm")),Object(r.createElement)(l.MediaUpload,{onSelect:function(e){return t({mapURL:e.url,mapID:e.id})},allowedTypes:"image",value:o.mapID,render:function(e){return Object(r.createElement)(n.Button,{className:o.mapID?"image-button":"button button-large",onClick:e.open},o.mapID?Object(r.createElement)("img",{src:o.mapURL}):Object(a.__)("Upload Image","imm"))}}))},save:function(){return null}}),Object(c.registerBlockType)("imm/store-color-block",{title:"Store Brand Color",icon:"admin-appearance",category:"imm-store-meta-blocks-category",attributes:{blockValue:{type:"string",source:"meta",meta:"imm_store_color"}},edit:function(e){var t=e.className,o=e.setAttributes,a=e.attributes;return Object(r.createElement)("div",{className:t},Object(r.createElement)(n.ColorPicker,{color:"#f00",disableAlpha:!0,value:a.blockValue,onChangeComplete:function(e){o({blockValue:e})}}))},save:function(){return null}}),Object(c.registerBlockType)("imm/deal-expirydate-block",{title:Object(a.__)("Deal Expiry Date","imm"),icon:"admin-tools",category:"common",attributes:{blockValue:{type:"string",source:"meta",meta:"_imm_deal_expirydate"}},edit:function(e){e.attributes;var t=e.setAttributes;return Object(r.createElement)(n.DateTimePicker,{currentDate:new Date,onChange:function(e){t({blockValue:e})}})},save:function(){return null}})}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./admin/js/imm-gutenberg.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./admin/js/blocks/meta/deal.js":
+/*!**************************************!*\
+  !*** ./admin/js/blocks/meta/deal.js ***!
+  \**************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+/***/ }),
+
+/***/ "./admin/js/blocks/meta/store.js":
+/*!***************************************!*\
+  !*** ./admin/js/blocks/meta/store.js ***!
+  \***************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
+/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("imm/store-phone-block", {
+  title: "Store Phone Number",
+  icon: "phone",
+  category: "imm-store-meta-blocks-category",
+  attributes: {
+    blockValue: {
+      type: "string",
+      source: "meta",
+      meta: "imm_store_phone"
+    }
+  },
+  edit: function edit(_ref) {
+    var className = _ref.className,
+        setAttributes = _ref.setAttributes,
+        attributes = _ref.attributes;
+
+    function updateBlockValue(blockValue) {
+      setAttributes({
+        blockValue: blockValue
+      });
+    }
+
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["TextControl"], {
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Store Phone Number", "imm"),
+      value: attributes.blockValue,
+      onChange: updateBlockValue
+    }));
+  },
+  // No information saved to the block
+  // Data is saved to post meta via attributes
+  save: function save() {
+    return null;
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("imm/store-email-block", {
+  title: "Store Email",
+  icon: "email",
+  category: "imm-store-meta-blocks-category",
+  attributes: {
+    blockValue: {
+      type: "string",
+      source: "meta",
+      meta: "imm_store_email"
+    }
+  },
+  edit: function edit(_ref2) {
+    var className = _ref2.className,
+        setAttributes = _ref2.setAttributes,
+        attributes = _ref2.attributes;
+
+    function updateBlockValue(blockValue) {
+      setAttributes({
+        blockValue: blockValue
+      });
+    }
+
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["TextControl"], {
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Store Email", "imm"),
+      value: attributes.blockValue,
+      onChange: updateBlockValue
+    }));
+  },
+  // No information saved to the block
+  // Data is saved to post meta via attributes
+  save: function save() {
+    return null;
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("imm/store-website-block", {
+  title: "Store Website",
+  icon: "admin-links",
+  category: "imm-store-meta-blocks-category",
+  attributes: {
+    blockValue: {
+      type: "string",
+      source: "meta",
+      meta: "imm_store_website"
+    }
+  },
+  edit: function edit(_ref3) {
+    var className = _ref3.className,
+        setAttributes = _ref3.setAttributes,
+        attributes = _ref3.attributes;
+
+    function updateBlockValue(blockValue) {
+      setAttributes({
+        blockValue: blockValue
+      });
+    }
+
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["TextControl"], {
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Store Website", "imm"),
+      value: attributes.blockValue,
+      onChange: updateBlockValue,
+      type: "url"
+    }));
+  },
+  // No information saved to the block
+  // Data is saved to post meta via attributes
+  save: function save() {
+    return null;
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("imm/store-facebook-block", {
+  title: "Facebook Page Url",
+  icon: "admin-links",
+  category: "imm-store-meta-blocks-category",
+  attributes: {
+    blockValue: {
+      type: "string",
+      source: "meta",
+      meta: "imm_store_facebook"
+    }
+  },
+  edit: function edit(_ref4) {
+    var className = _ref4.className,
+        setAttributes = _ref4.setAttributes,
+        attributes = _ref4.attributes;
+
+    function updateBlockValue(blockValue) {
+      setAttributes({
+        blockValue: blockValue
+      });
+    }
+
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["TextControl"], {
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Facebook Page URL", "imm"),
+      value: attributes.blockValue,
+      onChange: updateBlockValue,
+      type: "url"
+    }));
+  },
+  // No information saved to the block
+  // Data is saved to post meta via attributes
+  save: function save() {
+    return null;
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("imm/store-twitter-block", {
+  title: "Twitter Page Url",
+  icon: "admin-links",
+  category: "imm-store-meta-blocks-category",
+  attributes: {
+    blockValue: {
+      type: "string",
+      source: "meta",
+      meta: "imm_store_twitter"
+    }
+  },
+  edit: function edit(_ref5) {
+    var className = _ref5.className,
+        setAttributes = _ref5.setAttributes,
+        attributes = _ref5.attributes;
+
+    function updateBlockValue(blockValue) {
+      setAttributes({
+        blockValue: blockValue
+      });
+    }
+
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["TextControl"], {
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Twitter Page URL", "imm"),
+      value: attributes.blockValue,
+      onChange: updateBlockValue,
+      type: "url"
+    }));
+  },
+  // No information saved to the block
+  // Data is saved to post meta via attributes
+  save: function save() {
+    return null;
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("imm/store-instagram-block", {
+  title: "Instagram Page Url",
+  icon: "admin-links",
+  category: "imm-store-meta-blocks-category",
+  attributes: {
+    blockValue: {
+      type: "string",
+      source: "meta",
+      meta: "imm_store_instagram"
+    }
+  },
+  edit: function edit(_ref6) {
+    var className = _ref6.className,
+        setAttributes = _ref6.setAttributes,
+        attributes = _ref6.attributes;
+
+    function updateBlockValue(blockValue) {
+      setAttributes({
+        blockValue: blockValue
+      });
+    }
+
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["TextControl"], {
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Instagram Page URL", "imm"),
+      value: attributes.blockValue,
+      onChange: updateBlockValue,
+      type: "url"
+    }));
+  },
+  // No information saved to the block
+  // Data is saved to post meta via attributes
+  save: function save() {
+    return null;
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("imm/store-floor-block", {
+  title: "Mall Floor",
+  icon: "sort",
+  category: "imm-store-meta-blocks-category",
+  attributes: {
+    blockValue: {
+      type: "integer",
+      source: "meta",
+      meta: "imm_store_floor"
+    }
+  },
+  edit: function edit(_ref7) {
+    var className = _ref7.className,
+        setAttributes = _ref7.setAttributes,
+        attributes = _ref7.attributes;
+
+    function updateBlockValue(blockValue) {
+      setAttributes({
+        blockValue: blockValue
+      });
+    }
+
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["TextControl"], {
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Mall Floor", "imm"),
+      value: attributes.blockValue,
+      onChange: updateBlockValue,
+      type: "number"
+    }));
+  },
+  // No information saved to the block
+  // Data is saved to post meta via attributes
+  save: function save() {
+    return null;
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("imm/store-location-block", {
+  title: "Store Location",
+  icon: "location-alt",
+  category: "imm-store-meta-blocks-category",
+  attributes: {
+    blockValue: {
+      type: "number",
+      source: "meta",
+      meta: "imm_store_location"
+    }
+  },
+  edit: function edit(_ref8) {
+    var className = _ref8.className,
+        setAttributes = _ref8.setAttributes,
+        attributes = _ref8.attributes;
+
+    function updateBlockValue(blockValue) {
+      setAttributes({
+        blockValue: blockValue
+      });
+    }
+
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["TextControl"], {
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Store Location", "imm"),
+      value: attributes.blockValue,
+      onChange: updateBlockValue,
+      type: "number"
+    }));
+  },
+  // No information saved to the block
+  // Data is saved to post meta via attributes
+  save: function save() {
+    return null;
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("imm/store-size-block", {
+  title: "Store Size",
+  icon: "editor-expand",
+  category: "imm-store-meta-blocks-category",
+  attributes: {
+    blockValue: {
+      type: "string",
+      source: "meta",
+      meta: "imm_store_size"
+    }
+  },
+  edit: function edit(_ref9) {
+    var className = _ref9.className,
+        setAttributes = _ref9.setAttributes,
+        attributes = _ref9.attributes;
+
+    function updateBlockValue(blockValue) {
+      setAttributes({
+        blockValue: blockValue
+      });
+    }
+
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["TextControl"], {
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Store Size", "imm"),
+      value: attributes.blockValue,
+      onChange: updateBlockValue
+    }));
+  },
+  // No information saved to the block
+  // Data is saved to post meta via attributes
+  save: function save() {
+    return null;
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("imm/store-hours-block", {
+  title: "Store Opening Hours",
+  icon: "clock",
+  category: "imm-store-meta-blocks-category",
+  attributes: {
+    blockValue: {
+      type: "array",
+      source: "meta",
+      meta: "imm_store_hours"
+    }
+  },
+  edit: function edit(_ref10) {
+    var className = _ref10.className,
+        setAttributes = _ref10.setAttributes,
+        attributes = _ref10.attributes;
+
+    function updateBlockValue(blockValue) {
+      setAttributes({
+        blockValue: blockValue
+      });
+    }
+
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_editor__WEBPACK_IMPORTED_MODULE_3__["RichText"], {
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Store Opening Hours", "imm"),
+      tagName: "ul",
+      multiline: "li",
+      placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Monday - Friday 10am - 7pm", "imm"),
+      value: attributes.blockValue,
+      className: className,
+      onChange: updateBlockValue
+    });
+  },
+  // No information saved to the block
+  // Data is saved to post meta via attributes
+  save: function save() {
+    return null;
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("imm/store-logo-block", {
+  title: "Store Logo",
+  icon: "format-image",
+  category: "imm-store-meta-blocks-category",
+  attributes: {
+    logoID: {
+      type: "number"
+    },
+    logoURL: {
+      type: "string",
+      source: "meta",
+      meta: "imm_store_logo"
+    }
+  },
+  edit: function edit(_ref11) {
+    var setAttributes = _ref11.setAttributes,
+        attributes = _ref11.attributes;
+
+    function onSelectImage(media) {
+      return setAttributes({
+        logoURL: media.url,
+        logoID: media.id
+      });
+    }
+
+    ;
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h3", null, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Store Logo", "imm")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_editor__WEBPACK_IMPORTED_MODULE_3__["MediaUpload"], {
+      onSelect: onSelectImage,
+      allowedTypes: "image",
+      value: attributes.logoID,
+      render: function render(obj) {
+        return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+          className: attributes.logoID ? "image-button" : "button button-large",
+          onClick: obj.open
+        }, !attributes.logoID ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Upload Image", "imm") : Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
+          src: attributes.logoURL
+        }));
+      }
+    }));
+  },
+  // No information saved to the block
+  // Data is saved to post meta via attributes
+  save: function save() {
+    return null;
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("imm/store-map-block", {
+  title: "Store Map",
+  icon: "format-image",
+  category: "imm-store-meta-blocks-category",
+  attributes: {
+    mapID: {
+      type: "number"
+    },
+    mapURL: {
+      type: "string",
+      source: "meta",
+      meta: "imm_store_map"
+    }
+  },
+  edit: function edit(_ref12) {
+    var setAttributes = _ref12.setAttributes,
+        attributes = _ref12.attributes;
+
+    function onSelectImage(media) {
+      return setAttributes({
+        mapURL: media.url,
+        mapID: media.id
+      });
+    }
+
+    ;
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h3", null, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Store Map", "imm")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_editor__WEBPACK_IMPORTED_MODULE_3__["MediaUpload"], {
+      onSelect: onSelectImage,
+      allowedTypes: "image",
+      value: attributes.mapID,
+      render: function render(obj) {
+        return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+          className: attributes.mapID ? "image-button" : "button button-large",
+          onClick: obj.open
+        }, !attributes.mapID ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Upload Image", "imm") : Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
+          src: attributes.mapURL
+        }));
+      }
+    }));
+  },
+  // No information saved to the block
+  // Data is saved to post meta via attributes
+  save: function save() {
+    return null;
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("imm/store-color-block", {
+  title: "Store Brand Color",
+  icon: "admin-appearance",
+  category: "imm-store-meta-blocks-category",
+  attributes: {
+    blockValue: {
+      type: "string",
+      source: "meta",
+      meta: "imm_store_color"
+    }
+  },
+  edit: function edit(_ref13) {
+    var className = _ref13.className,
+        setAttributes = _ref13.setAttributes,
+        attributes = _ref13.attributes;
+
+    function updateBlockValue(blockValue) {
+      setAttributes({
+        blockValue: blockValue
+      });
+    }
+
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["ColorPicker"], {
+      color: "#f00",
+      disableAlpha: true,
+      value: attributes.blockValue,
+      onChangeComplete: updateBlockValue
+    }));
+  },
+  // No information saved to the block
+  // Data is saved to post meta via attributes
+  save: function save() {
+    return null;
+  }
+});
+
+/***/ }),
+
+/***/ "./admin/js/imm-gutenberg.js":
+/*!***********************************!*\
+  !*** ./admin/js/imm-gutenberg.js ***!
+  \***********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _blocks_meta_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/meta/store */ "./admin/js/blocks/meta/store.js");
+/* harmony import */ var _blocks_meta_deal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/meta/deal */ "./admin/js/blocks/meta/deal.js");
+
+
+
+/***/ }),
+
+/***/ "@wordpress/blocks":
+/*!*****************************************!*\
+  !*** external {"this":["wp","blocks"]} ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["blocks"]; }());
+
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!*********************************************!*\
+  !*** external {"this":["wp","components"]} ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["components"]; }());
+
+/***/ }),
+
+/***/ "@wordpress/editor":
+/*!*****************************************!*\
+  !*** external {"this":["wp","editor"]} ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["editor"]; }());
+
+/***/ }),
+
+/***/ "@wordpress/element":
+/*!******************************************!*\
+  !*** external {"this":["wp","element"]} ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["element"]; }());
+
+/***/ }),
+
+/***/ "@wordpress/i18n":
+/*!***************************************!*\
+  !*** external {"this":["wp","i18n"]} ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["i18n"]; }());
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=editor.js.map

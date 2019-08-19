@@ -418,32 +418,32 @@ class Imm_Admin {
     /**
      * Store Deal Post Meta
      */
-    register_post_meta(
-      'imm_deal',
-      '_imm_deal_expirydate',
-      [
-        'show_in_rest' => true,
-        'single' => true,
-        'type' => 'string',
-        'auth_callback' => function() {
-          return current_user_can( 'edit_posts' );
-        }
-      ]
-    );
+  //   register_post_meta(
+  //     'imm_deal',
+  //     '_imm_deal_expirydate',
+  //     [
+  //       'show_in_rest' => true,
+  //       'single' => true,
+  //       'type' => 'string',
+  //       'auth_callback' => function() {
+  //         return current_user_can( 'edit_posts' );
+  //       }
+  //     ]
+  //   );
 
-    register_post_meta(
-      'imm_deal',
-      '_imm_deal_store',
-      [
-        'show_in_rest' => true,
-        'single' => true,
-        'type' => 'string',
-        'auth_callback' => function() {
-          return current_user_can( 'edit_posts' );
-        }
-      ]
-    );
-  }
+  //   register_post_meta(
+  //     'imm_deal',
+  //     '_imm_deal_store',
+  //     [
+  //       'show_in_rest' => true,
+  //       'single' => true,
+  //       'type' => 'string',
+  //       'auth_callback' => function() {
+  //         return current_user_can( 'edit_posts' );
+  //       }
+  //     ]
+  //   );
+  // }
 
   /**
    * Register a store template containing the custom fields
