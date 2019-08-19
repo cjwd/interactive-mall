@@ -443,7 +443,7 @@ class Imm_Admin {
   //       }
   //     ]
   //   );
-  // }
+  }
 
   /**
    * Register a store template containing the custom fields
