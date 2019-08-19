@@ -416,7 +416,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("imm
   category: "imm-store-meta-blocks-category",
   attributes: {
     blockValue: {
-      type: "string",
+      type: "number",
       source: "meta",
       meta: "imm_store_size"
     }
@@ -437,7 +437,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("imm
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["TextControl"], {
       label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Store Size", "imm"),
       value: attributes.blockValue,
-      onChange: updateBlockValue
+      onChange: updateBlockValue,
+      type: "number"
     }));
   },
   // No information saved to the block

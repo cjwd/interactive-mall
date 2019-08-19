@@ -304,7 +304,7 @@ registerBlockType("imm/store-size-block", {
 
   attributes: {
     blockValue: {
-      type: "string",
+      type: "number",
       source: "meta",
       meta: "imm_store_size"
     }
@@ -321,6 +321,7 @@ registerBlockType("imm/store-size-block", {
           label={__("Store Size", "imm")}
           value={attributes.blockValue}
           onChange={updateBlockValue}
+          type="number"
         />
       </div>
     );
