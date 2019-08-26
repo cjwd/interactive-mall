@@ -67,7 +67,7 @@ $logo = get_post_meta($post->ID, 'imm_store_logo', true);
 </section>
 <figure class="store__photo">
   <?php the_post_thumbnail(); ?>
-</figure class="store__photo">
+</figure>
 </div>
 
 <?php do_action( 'imm_after_single_store' ); ?>
