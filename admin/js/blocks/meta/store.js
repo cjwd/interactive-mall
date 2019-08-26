@@ -39,41 +39,6 @@ registerBlockType("imm/store-phone-block", {
   }
 });
 
-registerBlockType("imm/store-email-block", {
-  title: "Store Email",
-  icon: "email",
-  category: "imm-store-meta-blocks-category",
-
-  attributes: {
-    blockValue: {
-      type: "string",
-      source: "meta",
-      meta: "imm_store_email"
-    }
-  },
-
-  edit({ className, setAttributes, attributes }) {
-    function updateBlockValue(blockValue) {
-      setAttributes({ blockValue });
-    }
-
-    return (
-      <div className={className}>
-        <TextControl
-          label={__("Store Email", "imm")}
-          value={attributes.blockValue}
-          onChange={updateBlockValue}
-        />
-      </div>
-    );
-  },
-
-  // No information saved to the block
-  // Data is saved to post meta via attributes
-  save: function () {
-    return null;
-  }
-});
 
 registerBlockType("imm/store-website-block", {
   title: "Store Website",
