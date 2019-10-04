@@ -3,12 +3,12 @@
 
   $(function () {
     var options = {
-        valueNames: ['list__link', {
-          data: ['level']
-        }, {
+      valueNames: ['list__link', {
+        data: ['level']
+      }, {
           data: ['category']
         }]
-      },
+    },
       mobileList = new List('mobile-list', options),
       spacesList = new List('spaces-list', options),
       sortByNameCtrl = document.getElementById('sort-by-name'),
@@ -167,7 +167,6 @@
 
         var contentItem = document.querySelector('.store__item[data-space="' + space + '"]');
 
-        contentItem.classList.remove('store__item--hover');
       });
     });
 
