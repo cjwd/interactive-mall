@@ -1,5 +1,31 @@
 <?php
+/**
+ * Get user defined category representing vacant shops
+ */
 $leases_category = get_option('imm_options')['lease_category'];
+
+/**
+ * Get Empty Shops
+ */
+$vacancies = get_posts([
+  'post_type' => 'imm_store',
+  'posts_per_page' => -1,
+  'tax_query' => [
+    [
+      'taxonomy'  => 'imm_store_category',
+      'terms' => $leases_category
+    ]
+  ]
+]);
+
+/**
+ * Get map locations of empty shops
+ */
+$map_locations = [];
+foreach ($vacancies as $vacancy) {
+  $space = trim(get_post_meta($vacancy->ID, 'imm_store_location', true));
+  $map_locations[] = $space;
+}
 
 $args = [
   'post_type' => 'imm_store',
@@ -68,7 +94,7 @@ $query = new WP_Query( $args );
 </div>
 <div class="mall-container bleed">
   <div class="mall-main">
-    <div class="mall">
+    <div class="mall" data-vacancies="<?= implode(',',$map_locations); ?>">
       <div class="surroundings">
         <!-- get_option -->
         <!-- <img class="surroundings__map" src="img/surroundings.svg" alt="Surroundings"> -->

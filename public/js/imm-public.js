@@ -50,6 +50,17 @@
       }
     });
 
+    /**
+     * Prevent click events on vacant shops
+     * Pointer Events are disabled via CSS
+     *
+     */
+    var vacantShopIds = mallEl.dataset.vacancies.split(','); // Returns an array
+    vacantShopIds.forEach(function (id) {
+      document.querySelector('.map__space[data-space="' + id + '"]').classList.add('map__space--vacancy');
+    })
+
+
 
     /**
      * Select a store from the sidebar
@@ -166,6 +177,8 @@
         var space = e.target.dataset.space;
 
         var contentItem = document.querySelector('.store__item[data-space="' + space + '"]');
+
+        contentItem.classList.remove('store__item--hover');
 
       });
     });
