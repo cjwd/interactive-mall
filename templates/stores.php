@@ -8,7 +8,22 @@ $args = [
   'paged' => $paged
 ];
 
-if ($atts->categories) {
+if ($atts->categories && $atts->exclude_categories) {
+  $categories = explode(',', $atts->categories);
+  $exclude_categories = explode(',', $atts->exclude_categories);
+  $args['tax_query'] = [
+    'relation' => 'AND',
+    [
+      'taxonomy'  => 'imm_store_category',
+      'terms' => $categories
+    ],
+    [
+      'taxonomy'  => 'imm_store_category',
+      'terms' => $exclude_categories,
+      'operator' => 'NOT IN'
+    ]
+  ];
+} elseif ($atts->categories) {
   $categories = explode(',', $atts->categories);
   $args['tax_query'] = [
     [
@@ -16,10 +31,7 @@ if ($atts->categories) {
       'terms' => $categories
     ]
   ];
-}
-
-if ($atts->exclude_categories) {
-  $exclude_categories = explode(',', $atts->exclude_categories);
+} elseif ($atts->exclude_categories) {
   $args['tax_query'] = [
     [
       'taxonomy'  => 'imm_store_category',
@@ -27,6 +39,8 @@ if ($atts->exclude_categories) {
       'operator' => 'NOT IN'
     ]
   ];
+} else {
+  // Do nothing
 }
 
 $view = $atts->view;
