@@ -232,7 +232,7 @@ registerBlockType("imm/store-location-block", {
 
   attributes: {
     blockValue: {
-      type: "number",
+      type: "string",
       source: "meta",
       meta: "imm_store_location"
     }
@@ -249,7 +249,7 @@ registerBlockType("imm/store-location-block", {
           label={__("Store Location", "imm")}
           value={attributes.blockValue}
           onChange={updateBlockValue}
-          type="number"
+          type="text"
         />
       </div>
     );

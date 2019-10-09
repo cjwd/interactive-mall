@@ -421,7 +421,7 @@ class Imm_Admin {
       [
         'show_in_rest'  =>  true,
         'single'  => true,
-        'type'  =>  'number'
+        'type'  =>  'string'
       ]
     );
 
