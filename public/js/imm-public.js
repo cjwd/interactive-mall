@@ -3,12 +3,12 @@
 
   $(function () {
     var options = {
-      valueNames: ['list__link', {
-        data: ['level']
-      }, {
+        valueNames: ['list__link', {
+          data: ['level']
+        }, {
           data: ['category']
         }]
-    },
+      },
       mobileList = new List('mobile-list', options),
       spacesList = new List('spaces-list', options),
       sortByNameCtrl = document.getElementById('sort-by-name'),
@@ -57,8 +57,11 @@
      */
     var vacantShopIds = mallEl.dataset.vacancies.split(','); // Returns an array
     vacantShopIds.forEach(function (id) {
-      document.querySelector('.map__space[data-space="' + id + '"]').classList.add('map__space--vacancy');
-    })
+      var vacancy = document.querySelector('.map__space[data-space="' + id + '"]');
+      if (vacancy) {
+        vacancy.classList.add('map__space--vacancy');
+      }
+    });
 
 
 
