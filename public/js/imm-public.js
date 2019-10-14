@@ -21,7 +21,8 @@
       mallNav = document.querySelector('.mallnav'),
       contentButton = document.querySelector('.content__button'),
       selectedLevel,
-      storeContentOpen;
+      storeContentOpen,
+      urlParams = new URLSearchParams(window.location.search);
 
     /**
      * sort by name ctrl
@@ -62,6 +63,25 @@
         vacancy.classList.add('map__space--vacancy');
       }
     });
+
+    /**
+     * Get a map location from the url
+     */
+    if (urlParams.has('level') && urlParams.has('loc')) {
+      var levelEl = levelsEl.querySelector('[data-level="' + urlParams.get('level') + '"]');
+      var space = urlParams.get('loc');
+      selectedLevel = urlParams.get('level');
+      var levelEl = levelsEl.querySelector('[data-level="' + selectedLevel + '"]');
+
+      // var parentEl = e.target.parentElement;
+
+      // parentEl.classList.add('list__item--active');
+      mallEl.classList.add('mall--content-open');
+      showLevelSpaces();
+      showLevel(levelEl);
+      showStoreContent(space);
+      selectMapSpace(space);
+    }
 
 
 
