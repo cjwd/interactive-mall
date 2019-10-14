@@ -73,9 +73,6 @@
       selectedLevel = urlParams.get('level');
       var levelEl = levelsEl.querySelector('[data-level="' + selectedLevel + '"]');
 
-      // var parentEl = e.target.parentElement;
-
-      // parentEl.classList.add('list__item--active');
       mallEl.classList.add('mall--content-open');
       showLevelSpaces();
       showLevel(levelEl);
