@@ -73,8 +73,8 @@ class Imm_Public {
   public function enqueue_scripts() {
     $mall_page = get_option('imm_options')['mallpage'];
 
-    wp_register_script( 'list-js', plugin_dir_url( __FILE__ ) . 'js/lib/list.min.js', null, '1.5.0', false );
-    wp_register_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/imm-public.js', array( 'jquery', 'list-js' ), $this->version, false );
+    wp_register_script( 'list-js', plugin_dir_url( __FILE__ ) . 'js/lib/list.min.js', null, '1.5.0', true );
+    wp_register_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/imm-public.js', array( 'jquery', 'list-js' ), $this->version, true );
 
     if( is_page( $mall_page) ) {
       wp_enqueue_script( $this->plugin_name );
