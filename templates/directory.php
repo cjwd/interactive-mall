@@ -95,7 +95,7 @@ $query = new WP_Query( $args );
 <div class="mall-container bleed">
   <div class="mall-main">
     <div class="mall" data-vacancies="<?= implode(',',$map_locations); ?>">
-      <div class="compass" style="width: 150px; padding: 24px; transform: rotate(270deg);">
+      <div class="compass">
         <img src="<?= IMM_PLUGIN_URL . 'public/icons/compass.svg'  ?>" alt="compass">
       </div>
       <div class="surroundings">
