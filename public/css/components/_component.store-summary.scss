@@ -41,6 +41,10 @@
   transform: translate3d(0, -25em, 0);
 }
 
+.stores--open .store__item--hover .store__item-title {
+  transform: translate3d(0, -30em, 0);
+}
+
 .store__card--current .store__item-title {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);

@@ -73,7 +73,7 @@
 }
 
 .level.level--current {
-  transform: translateZ(0vmin) rotate3d(0, 0, 1, 20deg);
+  transform: translateZ(10vmin) rotate3d(0, 0, 1, 20deg);
 }
 
 .levels--selected-0 .level:not(.level--0),
