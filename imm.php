@@ -40,6 +40,7 @@ define( 'PLUGIN_NAME_VERSION', '1.0.1' );
 /**
  * Plugin and template directories
  */
+define('IMM_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 define( 'IMM_PLUGIN_DIR', plugin_dir_path( __FILE__ ));
 define( 'IMM_PLUGIN_TEMPLATE_DIR', IMM_PLUGIN_DIR . 'templates/');
 
