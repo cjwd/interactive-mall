@@ -161,22 +161,17 @@
       e.target.classList.add('content__button--hidden');
     })
 
-
+    /**
+     * Show store title on map space hover
+     */
     mapSpaces.forEach(function (space) {
       space.addEventListener('mouseenter', function (e) {
-        if (!e.target.classList.contains('map__space')) {
+        if (!e.target.classList.contains('map__space') || e.target.classList.contains('map__space--vacancy')) {
           return;
         }
 
         var space = e.target.dataset.space,
           contentItem = document.querySelector('.store__item[data-space="' + space + '"]');
-
-        storeContentOpen = storesEl.querySelector('.store__card--current') ? true : false;
-
-        if (storeContentOpen) {
-          contentItem.classList.remove('store__item--hover');
-          return;
-        }
 
         contentItem.classList.add('store__item--hover');
       });
@@ -185,12 +180,6 @@
     mapSpaces.forEach(function (space) {
       space.addEventListener('mouseleave', function (e) {
         if (!e.target.classList.contains('map__space')) {
-          return;
-        }
-
-        storeContentOpen = storesEl.querySelector('.store__card--current') ? true : false;
-
-        if (storeContentOpen) {
           return;
         }
 
