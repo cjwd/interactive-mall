@@ -38,6 +38,10 @@
   transform: rotateZ(0deg) rotateX(-70deg) translateZ(5vmin);
 }
 
+.level--0.level--current:before {
+  transform: rotateZ(90deg) rotateX(-70deg) translateZ(5vmin);
+}
+
 .level:hover .map__ground {
   stroke: var(--secondary-color);
 }
@@ -75,6 +79,11 @@
 .level.level--current {
   transform: translateZ(10vmin) rotate3d(0, 0, 1, 20deg);
 }
+
+.level--0.level--current {
+  transform: translateZ(25vmin) rotate3d(0, 0, 1, -40deg);
+}
+
 
 .levels--selected-0 .level:not(.level--0),
 .levels--selected-1 .level:not(.level--1),
