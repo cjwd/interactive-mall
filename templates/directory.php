@@ -150,7 +150,7 @@ $query = new WP_Query( $args );
           </p>
           <div class="store__desc"><?php the_excerpt(); ?></div>
           <?php if( has_post_thumbnail() ) : ?>
-            <a href="<?php the_permalink(); ?>" class="btn btn--primary">View Store Page</a>
+            <a href="<?php the_permalink(); ?>" class="button is-primary">View Store Page</a>
           <?php endif; ?>
         </div>
       </div>
