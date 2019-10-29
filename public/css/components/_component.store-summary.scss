@@ -38,7 +38,7 @@
 .store__item--hover .store__item-title {
   opacity: 1;
   transition: opacity 0.3s;
-  transform: translate3d(0, -25em, 0);
+  transform: translate3d(0, -20em, 0);
 }
 
 .stores--open .store__item--hover:not(.store__card--current) .store__item-title {
