@@ -157,6 +157,7 @@
 
     contentButton.addEventListener('click', function (e) {
       removeActiveClasses();
+      storesEl.classList.remove('stores--open');
       mallEl.classList.remove('mall--content-open');
       e.target.classList.add('content__button--hidden');
     })
