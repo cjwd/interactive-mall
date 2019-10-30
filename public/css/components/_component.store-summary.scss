@@ -39,10 +39,18 @@
   opacity: 1;
   transition: opacity 0.3s;
   transform: translate3d(0, -20em, 0);
+
+  @media screen and (min-width: 1200px) and (max-width: 1366px) {
+    transform: translate3d(0, -17em, 0);
+  }
 }
 
 .stores--open .store__item--hover:not(.store__card--current) .store__item-title {
   transform: translate3d(0, -25em, 0);
+
+  @media screen and (min-width: 1200px) and (max-width: 1366px) {
+    transform: translate3d(0, -21em, 0);
+  }
 }
 
 .store__card--current .store__item-title {
