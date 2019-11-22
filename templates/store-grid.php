@@ -29,7 +29,7 @@ $size = get_post_meta($post->ID, 'imm_store_size', true);
         $category_link = sprintf(
             '<a class="imm-store__category" href="%1$s" alt="%2$s">%3$s</a>',
             esc_url( get_category_link( $category->term_id ) ),
-            esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
+            esc_attr( sprintf( __( 'View all stores in %s', 'imm' ), $category->name ) ),
             esc_html( $category->name )
         );
 
