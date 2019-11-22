@@ -1,7 +1,6 @@
 <?php
 $btn_text = $atts->btn_text;
 $btn_url = $atts->btn_url;
-$map = get_post_meta($post->ID, 'imm_store_logo', true);
 $floor = get_post_meta($post->ID, 'imm_store_floor', true);
 $size = get_post_meta($post->ID, 'imm_store_size', true);
 ?>
