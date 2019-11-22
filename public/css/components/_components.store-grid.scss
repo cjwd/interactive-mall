@@ -3,17 +3,31 @@
 =============================================*/
 
 .imm-store__title {
-  font-size: 22px !important;
-  font-weight: 700 !important;
+  margin-bottom: var(--unit-small);
+  padding-bottom: 0; // Reset Divi headings padding
+  line-height: 1.5;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .imm-store__img {
   width: 100%;
   margin: 0;
+  margin-bottom: var(--unit-small);
+
+  img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
 }
 
 .imm-store__img a {
   display: block;
+  line-height: 0;
 }
 
 .imm-store__description {
@@ -21,9 +35,21 @@
 }
 
 .imm-store__categories {
-  margin-bottom: var(--unit);
+  margin-bottom: var(--unit-small);
   padding: 0 !important;
   list-style-type: none !important;
+}
+
+.imm-store__category {
+  font-style: italic;
+  letter-spacing: 0.5px;
+
+}
+
+.imm-store__category:not(:last-child) {
+  &:after {
+    content: ', ';
+  }
 }
 
 /*=====  End of Store List  ======*/
