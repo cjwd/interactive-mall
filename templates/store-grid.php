@@ -19,10 +19,12 @@ $size = get_post_meta($post->ID, 'imm_store_size', true);
   <?php if ( "true" == $atts->show_categories) : ?>
     <div class="imm-store__categories">
     <?php
+    $featured_category = get_option('imm_options')['featured_category'];
     $categories = get_terms( array(
         'object_ids'  => $post->ID,
         'orderby' => 'name',
-        'order'   => 'ASC'
+        'order'   => 'ASC',
+        'exclude' => $featured_category
     ) );
 
     foreach( $categories as $category ) {
