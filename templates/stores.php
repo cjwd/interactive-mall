@@ -58,7 +58,9 @@ if ( 'list' == $view ) {
 ?>
 
 <div class="imm-stores-wrapper">
-  <h3><?= esc_html__($atts->title, 'imm'); ?></h3>
+  <?php if( !empty($atts->title)) : ?>
+    <h3><?= esc_html__($atts->title, 'imm'); ?></h3>
+  <?php endif; ?>
   <?php if ( $query->have_posts() ) : ?>
     <div class="imm-stores <?= $classes; ?>">
       <?php while ( $query->have_posts() ) : $query->the_post(); ?>
