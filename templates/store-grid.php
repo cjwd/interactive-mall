@@ -6,7 +6,6 @@ $floor = get_post_meta($post->ID, 'imm_store_floor', true);
 $size = get_post_meta($post->ID, 'imm_store_size', true);
 ?>
 <div class="imm-store grid-item">
-  <h4 class="imm-store__title"><?php the_title(); ?></h4>
 
   <?php if ( has_post_thumbnail() && ("true" == $atts->image) ) : ?>
     <figure class="imm-store__img">
@@ -15,6 +14,8 @@ $size = get_post_meta($post->ID, 'imm_store_size', true);
       </a>
     </figure>
   <?php endif; ?>
+
+  <h4 class="imm-store__title"><?php the_title(); ?></h4>
 
   <?php if ( "true" == $atts->show_categories) : ?>
     <div class="imm-store__categories">
@@ -27,7 +28,7 @@ $size = get_post_meta($post->ID, 'imm_store_size', true);
 
     foreach( $categories as $category ) {
         $category_link = sprintf(
-            '<a class="pill" href="%1$s" alt="%2$s">%3$s</a>',
+            '<a class="imm-store__category" href="%1$s" alt="%2$s">%3$s</a>',
             esc_url( get_category_link( $category->term_id ) ),
             esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
             esc_html( $category->name )
