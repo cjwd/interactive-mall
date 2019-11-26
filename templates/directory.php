@@ -106,9 +106,9 @@ $query = new WP_Query( $args );
         <?php
         $imm_maps = get_option('imm_maps');
         foreach ($imm_maps as $key => $map) : ?>
-          <div class="level level--<?= $key; ?>" data-level="<?= $key; ?>">
+          <div class="level level--<?= $key; ?>" data-level="<?= $key; ?>" data-map="<?= $map["label"] ?>">
             <svg class="map map--<?= $key; ?>" viewBox="0 0 2080 600" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
-              <?= $map ?>
+              <?= $map["msvg"] ?>
             </svg>
           </div>
         <!-- / level -->
