@@ -36,9 +36,15 @@
 }
 
 .store__item--hover .store__item-title {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 12px 24px;
   opacity: 1;
   transition: opacity 0.3s;
   transform: translate3d(0, -20em, 0);
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-weight: 700;
 
   @media screen and (min-width: 1200px) and (max-width: 1366px) {
     transform: translate3d(0, -17em, 0);
