@@ -4,7 +4,35 @@
   transform-style: preserve-3d;
 
   &.levels--open {
-    transform: rotateX(0) rotateZ(-20deg) translateZ(-50vh);
+    transform: rotateX(0) rotateZ(0deg) translateY(10vmin) translateZ(-25vh);
+  }
+}
+
+/**
+ *
+ * The Outside map (Level 0) needs special rotation due to its shape
+ *
+ */
+.levels.levels--open .level--0 {
+  transform: translateY(-15vmin) translateZ(25vmin) rotate3d(0, 0, 1, -90deg);
+}
+
+@supports (-ms-ime-align: auto) {
+  @media (min-width: 1366px) and (max-width: 1440px) {
+    .levels.levels--open {
+      transform: rotateX(0) rotateZ(0deg) translateY(10vmin) translateZ(-20vh);
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .levels.levels--open {
+      transform: rotateX(0) rotateZ(0deg) translateY(10vmin) translateZ(-18vh);
+    }
+
+    .levels.levels--open .level--0 {
+      transform: translateY(-15vmin) translateZ(20vmin)
+        rotate3d(0, 0, 1, -90deg);
+    }
   }
 }
 
@@ -79,15 +107,6 @@
   transition: transform 1s, opacity 1s;
   transition-delay: 0s;
 }
-
-.level.level--current {
-  transform: translateY(10vmin) translateZ(10vmin) rotate3d(0, 0, 1, 20deg);
-}
-
-.level--0.level--current {
-  transform: translateY(-15vmin) translateZ(25vmin) rotate3d(0, 0, 1, -70deg);
-}
-
 
 .levels--selected-0 .level:not(.level--0),
 .levels--selected-1 .level:not(.level--1),
