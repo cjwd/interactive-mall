@@ -43,13 +43,18 @@
 .imm-store__category {
   font-style: italic;
   letter-spacing: 0.5px;
-
 }
 
 .imm-store__category:not(:last-child) {
   &:after {
-    content: ', ';
+    content: ", ";
   }
+}
+
+.view-all-link {
+  display: block;
+  padding-top: var(--unit-small);
+  padding-bottom: var(--unit-small);
 }
 
 /*=====  End of Store List  ======*/
