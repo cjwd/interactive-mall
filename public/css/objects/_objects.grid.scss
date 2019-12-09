@@ -6,9 +6,19 @@
   display: grid;
 }
 
+.grid-item {
+  margin-bottom: var(--unit);
+
+  @media (min-width: 1024px) {
+    margin-bottom: 0;
+  }
+}
+
 .grid-3 {
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
 }
 
 /*=====  End of #Grid  ======*/
