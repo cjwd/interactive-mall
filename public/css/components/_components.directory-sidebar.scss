@@ -22,10 +22,28 @@
   width: 100%;
   height: 56px;
   padding: 1.315em 2em;
+  font-weight: bold;
   color: #fff;
   border: 0;
   background: var(--accent-color);
   border-radius: 0;
+
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff !important;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff !important;
+  }
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff !important;
+  }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff !important;
+  }
 }
 
 .search__input:focus {
@@ -57,7 +75,7 @@
   opacity: 0;
 }
 
-.label__checkbox:checked+.label__text {
+.label__checkbox:checked + .label__text {
   color: #053a47;
 }
 
